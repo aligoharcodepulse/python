@@ -92,6 +92,47 @@ print(h)
 
 
 
+# Operators
+# Arithmetic Operators
+print(5+5)
+print(5-5)
+print(10/2)
+print(5*2)
+print(10%3)
+print(10 // 6)
+
+# Comparison Operators
+i = 5
+j = 3
+print(i>j, i<j, i>=j, i<=j, i==j, i!=j)
+
+# Logical Operators
+k = True
+l = False
+print(k and l, k or l, not l)
+
+# Bitwise Operators
+m = 0b1010
+n = 0b1011
+print(m & n, m | n)
+
+# Assignment Operators
+m = n
+print(m)
+
+# Identity Operators
+o = "Hello"
+p = "Hello"
+print(o is p)
+
+o = [1,2,3,4,5]
+p = [1,2,3,4,5]
+print(o is p)
+
+# Membership Operators
+q = "Ali Gohar"
+print('l' in q)
+
 
 
 
