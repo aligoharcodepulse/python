@@ -154,3 +154,27 @@ else:
     print("Invalid Email missing @")
     
 
+
+
+# While Loop
+number = int(input("Enter Number "))
+i=1
+while i<=10:
+    print(number, "*", i, "=", number*i)
+    i+=1
+
+# Guessing Game
+import random
+target = random.randint(1,100)
+guess = int(input("Guess kro "))
+countGuess = 1
+while(guess!=target):
+    if(guess>target):
+        print("Guess Lower ")
+    else:
+        print("Guess Higher ")
+    guess = int(input("Ek or Try kr "))
+    countGuess+=1
+
+print("Sahi Jawab")
+print("Total guesses:", countGuess)
