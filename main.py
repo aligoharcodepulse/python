@@ -5,6 +5,8 @@ print(5)
 print(5-3)
 
 
+
+
 # Data Types
 # Dynamic Typing
 name = "Ali"
@@ -18,3 +20,25 @@ print(age)
 
 age = 20.0
 print(age)
+
+
+
+
+
+# Variables
+office = "Marketing"
+price = 20.3
+year = 2006
+
+list = [1,2,3,4,5]
+tuple = (1,2,3,4,5)
+sets = {(1,2,3,4,5),(6,7,8,9,10)}
+print(office, price, year, list, tuple, sets)
+
+
+
+
+# Keywords
+# python has 33 keywords (Can't be used as variable name)
+import keyword
+print(keyword.kwlist)
