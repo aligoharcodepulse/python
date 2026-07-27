@@ -178,3 +178,25 @@ while(guess!=target):
 
 print("Sahi Jawab")
 print("Total guesses:", countGuess)
+
+
+
+
+# For Loop
+for i in range(1,10,3):
+    print(i, end=" ")
+
+for i in [1,2,3,4]:
+    print(i, end=" ")
+
+for i in (6,7,8,9):
+    print(i, end=" ")
+
+for i in "Ali Gohar":
+    print(i, end=" ")
+
+print(end='\n')
+for i in range(1,5):
+    for j in range(0,i):
+        print('*', end=' ')
+    print(end='\n')
