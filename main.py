@@ -136,3 +136,21 @@ print('l' in q)
 
 
 
+
+# Conditional Statements
+email = input("Enter Email")
+password = input("Password")
+if '@' in email:
+    if email == "ali@gmail.com" and password == '1234':
+        print('Welcome')
+    elif email == "ali@gmail.com" and password != '1234':
+        print('Incorrect Password')
+        password = input("Enter password again:") 
+        if password == '1234':
+            print("Welcome")
+    else:
+        print('Invalid')
+else:
+    print("Invalid Email missing @")
+    
+
