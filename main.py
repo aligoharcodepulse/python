@@ -42,3 +42,15 @@ print(office, price, year, list, tuple, sets)
 # python has 33 keywords (Can't be used as variable name)
 import keyword
 print(keyword.kwlist)
+
+
+
+
+# Input and type conversion
+#name = input("Enter Name: ")
+
+x = int(input("Enter Num 1: "))
+y = int(input("Enter Num 2: "))
+result = x + y
+print(result)
+
