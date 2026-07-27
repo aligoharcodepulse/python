@@ -54,3 +54,44 @@ y = int(input("Enter Num 2: "))
 result = x + y
 print(result)
 
+
+
+# Literals
+# Numeric
+a = 0b1010 #binary
+b = 0o200 #octal
+c = 100 #decimal
+d = 0x100 #hexadecimal
+
+float_1 = 10.5
+float_2 = 1e2
+
+e = 5j
+
+print(a, b, c, d)
+print(float_1, float_2)
+print(e, e.real, e.imag)
+
+# String
+string = 'This is String'
+char = 'A'
+multiline_str = """hellllooooooooooooooooooooooooooooooooooooo""" 
+unicode = u"\U0001f600"
+raw_str = r"raw \n string"
+print(string, char, multiline_str, unicode, raw_str, sep='\n')
+
+# Boolean
+f = True + 4
+g = False + 10
+print(f, g)
+
+# Special
+h = None
+print(h)
+
+
+
+
+
+
+
