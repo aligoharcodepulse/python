@@ -385,3 +385,63 @@ print(end='\n')
 
 # Membership operator
 print('o' in c)
+
+
+
+
+# String Functions
+c = "hello world"
+print(len(c))
+print(max(c))
+print(min(c))
+print(sorted(c))
+print(sorted(c, reverse=True))
+
+print(c.capitalize())
+print(c.title())
+print(c.upper())
+print(c.lower())
+print(c.swapcase()) # Convert lower to upper and so on.
+
+print(c.count('o'))
+
+print(c.find('o')) # if not found return -1
+print(c.index('ello')) # if not found throw error
+
+print(c.endswith("ld"))
+print(c.startswith("el"))
+
+# format
+print("Hello I'm {} and I'm {} years old".format("Ali", 30))
+print("Hello I'm {1} and I'm {0} years old".format("Ali", 30))
+print("Hello I'm {name} and I'm {age} years old".format(name = "Ali", age = 30))
+
+
+# isalnum/ isalpha/ isdecimal/ isdigit/ isidentifier
+c = "Ali20"
+print(c.isalnum())
+c = "Ali20@"
+print(c.isalnum())
+print(c.isalpha())
+c = "20"
+print(c.isdecimal())
+print(c.isdigit())
+c="_hello"
+print(c.isidentifier())
+
+# Split
+c="hello ahmad, you are welcome"
+print(c.split())
+print(c.split("a"))
+print(c.split("x"))
+
+# Join
+print(" ".join(['who', 'is', 'the', 'PM', 'of', 'Pakistan?']))
+
+# Replace
+print(c.replace("ahmad","ali"))
+
+# Strip
+name = "                ali             "
+print("hi", name)
+print("Hi", name.strip())
