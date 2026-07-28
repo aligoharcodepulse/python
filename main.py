@@ -219,3 +219,56 @@ for i in range(1,11):
 # Pass
 for i in range(1,11):
     pass
+
+
+
+
+# Buiilt-in Functions
+# 1. Input
+name = input("Enter Name: ")
+
+# 2. Print
+print("Your Name is", name)
+# 3. Type
+age = input("Enter Age: ")
+
+# 4. Int
+int(age)
+print("Your age is", age)
+
+# 5. Absolute (abs)
+print(abs(4))
+print(abs(-4))
+
+# 6. Power (pow)
+print(pow(2,10))
+
+# 7. Min/Max (Pass Iterable)
+print(max([100,200,300,400]))
+
+# 8. Round (22/7, 3)
+c = 22/7
+print(round(c,2))
+
+# 9. DivMod (5,2)
+print(divmod(10,3))
+
+# 10. bin/oct/hex
+print(bin(10))
+print(hex(10))
+print(oct(10))
+
+# 11. id (address)
+print(id(c))
+
+# 12. ord ('C') return ASCII
+print(ord('A'))
+
+# 13. len (iterable)
+print(len({4,5,6,7,8}))
+
+# 14. sum (iterable)
+print(sum({1,2,3,4,5}))
+
+# 15. help (pass function name for details)
+help('input')
