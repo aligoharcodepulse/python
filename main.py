@@ -200,3 +200,22 @@ for i in range(1,5):
     for j in range(0,i):
         print('*', end=' ')
     print(end='\n')
+
+
+
+
+# Break Statement
+for i in range(1,11):
+    if i == 5:
+        break
+    print(i, end=' ')
+
+# Continue Statement
+for i in range(1,11):
+    if i == 5:
+        continue
+    print(i, end=' ')
+
+# Pass
+for i in range(1,11):
+    pass
