@@ -445,3 +445,131 @@ print(c.replace("ahmad","ali"))
 name = "                ali             "
 print("hi", name)
 print("Hi", name.strip())
+
+
+
+
+
+# Lists
+# Homogeneous
+l = [1,2,3,4,5]
+print(l)
+
+# Heterogeneous
+l = [1,"Hello",20.5, True]
+print(l)
+
+# Multi-dimensional
+# 2D
+l = [1,2,[3,4],[5,6,7]]
+print(l)
+# 3D
+l = [[[1,2],[3,4]],[5,6]]
+print(l)
+
+l = list("Ali Gohar")
+print(l)
+
+l = [1,2,3,4,5]
+print(l[0])
+print(l[2:])
+print(l[-1])
+print(l[:3])
+print(l[0:4])
+
+l = [1,2,[3,4],[5,6,7]]
+print(l[3][0])
+print(l[-2][0])
+
+l = [[[1,2],[3,4]],[5,6]]
+print(l[0][1][1])
+
+# Lists are Mutable
+l = [1,2,3,4,5]
+l[0] = 100
+print(l)
+l[-1] = 500
+print(l)
+l[-4:-1] = [200,300,400]
+print(l)
+
+# Add new element (append, extend, insert)
+l.append(600)
+l.append("hello")
+print(l)
+
+l.extend([1000,1100,1200])
+print(l)
+
+l.append([1,2])
+print(l)
+
+l.extend("Ali")
+print(l)
+
+l.insert(1,"Gohar")
+print(l)
+
+
+# Delete (del, remove, pop, clear)
+del l[-3:]
+print(l)
+
+l.remove("hello")
+print(l)
+
+l.pop()
+print(l)
+
+l.clear() # empty the list
+print(l)
+
+
+# List Operations
+l1 = [1,2,3,4]
+l2 = [5,6,7,8]
+print(l1 + l2)
+print(l1 * 2)
+for i in l1:
+    print(i)
+
+l3 = [1,2,3,[4,5]]
+for i in l3:
+    print(i)
+
+print(4 in l3)
+print([4,5] in l3)
+
+
+
+# Functions on lists
+print(len(l1))
+print(max(l1))
+print(min(l1))
+print(sorted(l1, reverse=True))
+print(l1)
+l1.sort(reverse=True)
+print(l1)
+
+l = "how are you?"
+print(l.title())
+print(l)
+sample = []
+for i in l.split():
+    sample.append(i.capitalize())
+print(sample)
+print(" ".join(sample))
+
+l = "aligohar@gmail.com" 
+print(l.index('@'))
+print(l[0:8])
+
+print(l[:l.find('@')])
+
+l = [1,1,2,2,3,3,4,4]
+l1 = []
+for i in l:
+    if i not in l1:
+        l1.append(i)
+
+print(l1)
