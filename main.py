@@ -697,3 +697,68 @@ print(s1.isdisjoint(s2))
 print(s1.issubset(s2))
 print(s1.issuperset(s2))
 
+
+
+
+# Dictionary
+# 1. Dictionary has no indexing
+# 2. Dictionary is a mutable data type
+# 3. Keys -> immutable, Value -> can be mutable
+# 4. Keys should be unique
+
+# Mutable -> Lis/ Sets/ Dictionary
+# Immutable -> String/ Integer/ Floats/ Boolean/ Complex/ Tuples
+
+# Create
+d = {'Name': "Ali", 'Gender': "Male"}
+print(d)
+
+# d = {[1,2,3]:"Ali"} # keys will always be immutable
+d = {(1,2,3):"Ali"}
+print(d)
+
+d = {'Name': "Ali", 'Name': "Gohar"} # code will run but value of name will be updated
+print(d)
+
+# 2D
+d1 = {"Name": "Ali","College":"ICP","Marks":{"Sub1":80,"Sub2":76,"Sub3":87}}
+print(d1)
+
+
+# Access (Can onlyaccess through keys)
+print(d["Name"])
+print(d1["Marks"]["Sub2"])
+
+
+# Edit
+d["Name"]="Ali"
+print(d)
+
+
+# Add new key value pairs
+d["Age"]=20
+print(d)
+
+d1["Marks"]["Sub4"]=50
+print(d1)
+
+
+# Delete
+del d1["College"]
+print(d1)
+
+
+# Operations (Don't allow Concatenation and Multiplication)
+for i in d1:
+    print(i, d1[i])
+
+print("Name" in d1)
+
+
+# Functions
+print(len(d1))
+print(min(d1))
+print(max(d1))
+print(sorted(d1))
+print(d1.keys())
+print(d1.values())
