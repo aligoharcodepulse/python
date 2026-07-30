@@ -576,54 +576,124 @@
 
 
 
-# Tuples (read-only)
+# # Tuples (read-only)
+# # Create
+# t = ()
+# print(t)
+# t = (1,2,3,4,5)
+# print(t)
+# t = (1,"Hello", True, 20.5)
+# print(t)
+
+# # 2D
+# t = (1,2,3,(4,5))
+# print(t)
+
+# t = 5
+# print(type(t))
+# t = ("hello")
+# print(type(t))
+
+# t = ("hello",)
+# print(type(t))
+
+# t = tuple("Hello")
+# print(t)
+
+# t = tuple([1,2,3,4,5])
+# print(t)
+
+
+# # Access Items
+# print(t[0])
+# print(t[-1])
+
+# # Edit (Tuples are immutable)
+
+# # Delete (can delete whole tuple)
+# # del t
+
+# t1 = (6,7,8,9,10)
+# print(t + t1)
+# print(t * 2)
+
+# for i in t:
+#     print(i)
+# print(6 in t1)
+
+# # Functions
+# print(len(t))
+# print(min(t))
+# print(max(t))
+# print(sorted(t, reverse=True))
+
+
+
+# Sets
+# 1. Sets don't allow duplicates
+# 2. Sets have no indexing/slicing
+# 3. Sets don't allow mutable data types
+# 4. Set itself is a mutable data type
+
+
 # Create
-t = ()
-print(t)
-t = (1,2,3,4,5)
-print(t)
-t = (1,"Hello", True, 20.5)
-print(t)
+s1 = {}
+print(type(s1))
+s1 = set()
+print(type(s1))
+s1 = {1,2.3,4,5}
+print(s1)
+s2 = {"Hello", 1, True, 10.4}
+print(s2)
 
-# 2D
-t = (1,2,3,(4,5))
-print(t)
+s3 = {1,1,2,3,3,4,5,5}
+print(s3)
 
-t = 5
-print(type(t))
-t = ("hello")
-print(type(t))
+# s4 = {[1,2,3],"Hello"}
+# print(s4)
+s4 = {(1,2,3),"Hello"}
+print(s4)
 
-t = ("hello",)
-print(type(t))
+# s5 = {{1,2},{3,4}} # don't allow
+# print(s5)
 
-t = tuple("Hello")
-print(t)
+# Add Items
+s1.add(6)
+print(s1)
 
-t = tuple([1,2,3,4,5])
-print(t)
+# Delete (del, remove, pop)
+# del delete whole set
+s1.remove(6)
+print(s1)
+
+s1.pop() # sets use hashing
+print(s1)
 
 
-# Access Items
-print(t[0])
-print(t[-1])
+# Set Operations
+s1 = {1,2,3,4,5}
+s2 = {11,12,13,14,15, 2}
 
-# Edit (Tuples are immutable)
+# Sets don't allow concatenation and multiplication
 
-# Delete (can delete whole tuple)
-# del t
+for i in s2:
+    print(s2)
 
-t1 = (6,7,8,9,10)
-print(t + t1)
-print(t * 2)
-
-for i in t:
-    print(i)
-print(6 in t1)
+print(1 in s1)
 
 # Functions
-print(len(t))
-print(min(t))
-print(max(t))
-print(sorted(t, reverse=True))
+print(len(s2))
+print(min(s2))
+print(max(s2))
+print(sorted(s2))
+print(sorted(s2, reverse=True))
+
+print(s1.union(s2))
+print(s1.intersection(s2))
+print(s1.difference(s2))
+print(s2.difference(s1))
+print(s1.symmetric_difference(s2))
+print(s1.isdisjoint(s2))
+print(s1.issubset(s2))
+print(s1.issuperset(s2))
 
