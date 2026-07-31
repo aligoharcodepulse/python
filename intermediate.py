@@ -117,3 +117,119 @@ t1[0][0] = 100
 print(t1)
 print(id(l1), id(l2), id(t1), sep=" ")
 
+
+
+# Functions (Abstraction and Composition)
+def is_even(number):
+     """
+     This function tells if a given number is even or not
+     input - any vali integer
+     output - even/odd
+     Created By - Ali
+     Last Edited - 31st July, 2026
+     """
+     if type(number) == int:
+        if(number % 2 == 0):
+            return "Even"
+        else:
+            return "Odd"
+     else:
+        return "Not Allowed"
+
+print(is_even("Ali"))
+print(is_even.__doc__)
+
+
+# Default Arguments
+def power(a,b):
+    return a**b
+print(power(2,3))
+# print(power(2)) error
+
+# Solution is default values
+def power(a = 1, b = 1):
+    return a**b
+print(power(2,3)) # Positional Arguments
+print(power(2))
+print(power())
+
+# keyword arguments (has greater priority than positional arguments)
+print(power(b=2, a=3))
+
+# Arbitrary Arguments (eg. print function)
+def flexi(*number): # create tuple from number
+    product = 1
+    print(number)
+    for i in number:
+        product*=i
+    print(product)
+
+flexi(5,4,3,2,1)
+
+# Local and Global Variable
+def f(y):
+    x = 1
+    x += 1
+    print(x)
+
+x = 5
+f(x)
+print(x)
+
+
+
+def g(y):
+    print(x)
+    print(x+1)
+
+x = 5
+g(x)
+print(x)
+
+
+
+def h(y):
+    global x # solution to update value
+    x += 1 # Not allowed to change the value of a global variable
+
+x = 5
+h(x)
+print(x)
+
+
+# Nested Function
+def f():
+    print("Inside f")
+    def g():
+        print("Inside g")
+    g()
+f()
+# g() # Error (Nested function is abstracted from main program)
+
+# Functions as Objects
+def eg(num):
+    return num**2
+c = eg # functions are objects
+print(c(3))
+
+del f
+print(c(4))
+
+l = [1,2,3,c]
+print(l[-1](2))
+
+
+
+def f():
+    def x(a,b):
+        return a+b
+    return x
+val = f()(3,4)
+print(val)
+
+
+
+
+
+
+
