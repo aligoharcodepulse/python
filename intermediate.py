@@ -359,3 +359,47 @@ students = [
 ]
 
 print(list(map(lambda student : student["Name"], students)))
+
+
+
+# Filter Function
+l = [1,2,3,4,5,6,7]
+print(list(filter(lambda x:x>5, l)))
+
+fruits = ['Apple', 'Orange', 'Mango', 'Guava']
+print(list(filter(lambda fruit: 'e' in fruit, fruits)))
+
+
+# Reduce Function
+import functools
+print(functools.reduce(lambda x,y : x+y, l))
+
+l1 = [12,34,56,11,21,58]
+print(functools.reduce(lambda x,y: x if x>y else y, l1 ))
+
+print(functools.reduce(lambda x,y: x if x<y else y, l1 ))
+
+# List Comprehension
+l = [1,2,3,4,5]
+l = [item * 2 for item in l]
+print(l)
+
+l2 = [i**2 for i in range(10)]
+print(l2)
+
+l3 = [i**2 for i in range(10) if i%2==0]
+print(l3)
+
+l4 = [fruit for fruit in fruits if fruit[0]=='O']
+print(l4)
+
+# Dictionary Comprehension
+d = {"Name":"Ali", "Gender":"Male", "Age":20}
+print(d.items())
+
+d1 = {key:value for key,value in d.items() if len(key)>3}
+print(d1)
+
+print(l)
+d2 = {item:item/2 for item in l}
+print(d2)
