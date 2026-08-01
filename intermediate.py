@@ -298,4 +298,44 @@ print(time.time() - start)
 
 
 
+# Lambda Functions (Anonymous Functions)
+# lambda input: expression
+x = lambda x : x**2
+print(x(9))
+
+a = lambda x,y : x+y
+print(a(9, 1))
+print(type(a))
+
+# Difference between normal and lambda function
+# 1. Lambda function has no return value
+# 2. One line
+# 3. Not used for code reusability
+# 4. No Name
+
+# Why? 
+# Along with higher order functions
+
+b = lambda x : x[0] == 'a'
+print(b('apple'))
+
+c = lambda x : "Even" if x % 2 == 0 else "Odd"
+print(c(3))
+
+# Higher order functions
+def return_sum(func,l):
+    result = 0
+    for i in l:
+        if func(i):
+            result+=i
+    return result
+
+l = [1,2,3,4,5,6,7,8,9]
+x = lambda x : x%2 == 0
+y = lambda x : x%2 != 0
+z = lambda x : x%3 == 0
+
+print(return_sum(x,l))
+print(return_sum(y,l))
+print(return_sum(z,l))
 
