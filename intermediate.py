@@ -339,3 +339,23 @@ print(return_sum(x,l))
 print(return_sum(y,l))
 print(return_sum(z,l))
 
+
+
+# Map function
+l = [1,2,3,4,5]
+print(list(map(lambda x : x*2, l)))
+
+print(list(map(lambda x : x%2 == 0, l)))
+
+students = [
+    {
+        "Name": "Ali",
+        "Father Name": "Gohar Ali"
+    },
+    {
+        "Name": "Ahmad",
+        "Father Name": "Yasin"
+    }
+]
+
+print(list(map(lambda student : student["Name"], students)))
