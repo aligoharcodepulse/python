@@ -229,6 +229,72 @@ print(val)
 
 
 
+# Recursion
+def multiply(a,b):
+    result = 0
+    for i in range(b):
+        result = result + a
+    print(result)
+
+multiply(5,4)
+
+# Now same code through recursion
+def multiply(a,b):
+    if b == 1:
+        return a
+    else:
+        return a + multiply(a, b-1)
+
+print(multiply(5,6))
+
+
+# factorial
+def fact(number):
+    if number == 1:
+        return 1
+    else:
+        return number * fact(number-1)
+print(fact(5))
+
+
+# Palindrome
+def palin(text):
+    if len(text) <= 1:
+        print("Palindrome")
+    else:
+        if(text[0] == text[-1]):
+            palin(text[1:-1])
+        else:
+            print("Not a Palindrome")
+
+palin("malayalam")
+palin("hello")
+palin("abba")
+
+
+# Fabonacci
+def fabonacci(m):
+    if m == 0 or m == 1:
+        return 1
+    else:
+        return fabonacci(m-1) + fabonacci(m-2)
+print(fabonacci(12))
+
+
+# Fabonacci through dynamic programming (memorization) for time complexity
+import time
+def memo(m, d):
+    if m in d:
+        return d[m]
+    else:
+        d[m] = memo(m-1, d) + memo(m-2, d)
+        return d[m]
+
+start = time.time()
+d = {0:1, 1:1}
+print(memo(48, d))
+print(time.time() - start)
+
 
 
 
