@@ -4,10 +4,13 @@ print(type(l)) # Eveything in python is an object
 class Atm:
     # Function Vs Method
     # Method is a function inside a class
-    def __init__(self): # Constructor
+    # Jo Object bnta hai wo hii self hai
+    # Through self we can access one method from another method inside the same class
+    def __init__(self): # Constructor (Magic Method)
         self.pin = ""
         self.balance = 0
         self.menu()
+        print(id(self))
 
     def menu(self):
         user_input = input("""
@@ -69,10 +72,7 @@ class Atm:
             print("Invalid Pin")
         self.menu()
 
-    
-    
-
-
 
 obj = Atm()
+print(id(obj))
 
