@@ -127,7 +127,7 @@ class Atm:
     # Jo Object bnta hai wo hii self hai
     # Through self we can access one method from another method inside the same class
     def __init__(self): # Constructor (Magic Method)
-        self.__pin = ""
+        self.__pin = "" # Instance Variable
         self.__balance = 0
         self.menu()
         print(id(self))
@@ -204,7 +204,7 @@ class Atm:
         self.menu()
 
 
-obj = Atm()
+obj = Atm() # obj is reference variable
 print(obj.get_pin())
 obj.set_pin(5678)
 print(obj.get_pin())
