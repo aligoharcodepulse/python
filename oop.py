@@ -117,3 +117,94 @@ print(obj * obj1)
 print(obj / obj1)
 
 
+
+# Encapsulation
+# Nothing in python is completely private
+# below variables can be accessed through _Atm__balance
+class Atm:
+    # Function Vs Method
+    # Method is a function inside a class
+    # Jo Object bnta hai wo hii self hai
+    # Through self we can access one method from another method inside the same class
+    def __init__(self): # Constructor (Magic Method)
+        self.__pin = ""
+        self.__balance = 0
+        self.menu()
+        print(id(self))
+
+    def get_pin(self):
+        return self.__pin
+
+    def set_pin(self, new_pin):
+        if type(new_pin)  == str:
+            self.__pin = new_pin
+            print("Pin Changed")
+        else:
+            print("Not Allowed")
+        
+
+    def menu(self):
+        user_input = input("""
+        How would you like to proceed?
+        1. Enter 1 to Create Pin
+        2. Enter 2 to Deposit
+        3. Enter 3 to Withdraw
+        4. Enter 4 to Check Balance
+        5. ENter 5 to Exit
+""")
+        if user_input == "1":
+            self.create_pin()
+        elif user_input == "2":
+            self.deposit()
+        elif user_input == "3":
+            self.withdraw()
+        elif user_input == "4":
+            self.current_balance()
+        else:
+            print("bye")
+
+    def create_pin(self):
+        self.__pin = input("Enter your pin: ")
+        print("Pin created successfully")
+        self.menu()
+
+    def deposit(self):
+        temp = input("Enter Pin: ")
+        if temp == self.__pin:
+            amount = int(input("Enter Amount: "))
+            self.__balance = self.__balance + amount
+            print("Deposit Successful")
+
+        else:
+            print("Invalid Pin")
+        self.menu()
+
+
+    def withdraw(self):
+        temp = input("Enter Pin: ")
+        if temp == self.__pin:
+            amount = int(input("Enter Amount: "))
+            if amount  <= self.__balance:
+                self.__balance -= amount
+                print("Withdraw Successful")
+            else:
+                print("Insufficient Balance")
+
+        else:
+            print("Invalid Pin")
+        self.menu()
+
+
+    def current_balance(self):
+        temp = input("Enter Pin: ")
+        if temp == self.__pin:
+            print("Current Balance: ", self.__balance)
+        else:
+            print("Invalid Pin")
+        self.menu()
+
+
+obj = Atm()
+print(obj.get_pin())
+obj.set_pin(5678)
+print(obj.get_pin())
