@@ -208,3 +208,34 @@ obj = Atm() # obj is reference variable
 print(obj.get_pin())
 obj.set_pin(5678)
 print(obj.get_pin())
+
+
+# Pass by Reference
+# Class Objects are mutable
+# If you pass the object..changes may occur in that
+class Customer:
+    def __init__(self, name):
+       self.name = name
+
+    def intro(self):
+        print("I'm", self.name)
+
+def greet(customer): # Aliasing
+    print(id(customer))
+    customer.name = "Ahmad"
+    print(customer.name)
+    print(id(customer))
+
+obj = Customer("Ali")
+print(id(obj))
+greet(obj)
+print(obj.name)
+
+obj1 = Customer("Ahmad")
+obj2 = Customer("Ali")
+l = [obj1, obj2] # Collection of Objects
+
+for i in l:
+    i.intro()
+
+
