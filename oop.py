@@ -292,3 +292,50 @@ cust = Customer("Ali", "Male", addr)
 print(cust.name, cust.gender, cust.address.city)
 cust.edit_profile("Ahmad", "Charsadda", 24421, "KP")
 print(cust.name, cust.gender, cust.address.city, cust.address.pincode)
+
+
+
+# Inheritence
+class User:
+    def login(self):
+        print("Login")
+
+    def register(self):
+        print("Register")
+
+class Student(User):
+    def enroll(self):
+        print("Enroll")
+
+    def review(self):
+        print("Review")
+
+stu1 = Student()
+stu1.register()
+stu1.login()
+stu1.enroll()
+stu1.review()
+
+
+class Phone:
+    def __init__(self, price, brand, camera):
+        print("Inside Phone Constructor")
+        self.price = price
+        self.__brand = brand
+        self.camera = camera
+
+    def buy(self):
+        print("Buying Phone")
+
+class SmartPhone(Phone):
+    def buy(self): # Method Overriding -> Polymorphism
+        print("Buying Smart Phone")
+    
+
+s1 = SmartPhone(10000, "Apple", "2 Pixel")
+# print(s1.__brand) error can't access private
+s1.buy()
+
+
+# Polymorphism
+# Method Overriding, Method Overloading, and Operator Overloading
