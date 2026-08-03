@@ -6,11 +6,33 @@ class Atm:
     # Method is a function inside a class
     # Jo Object bnta hai wo hii self hai
     # Through self we can access one method from another method inside the same class
+
+    # Static/Class Variable
+    __counter = 1
+
     def __init__(self): # Constructor (Magic Method)
+        # Instance Variable
         self.pin = ""
         self.balance = 0
+
+        self.sno = Atm.__counter
+        Atm.__counter += 1
+        print(self.sno)
         self.menu()
         print(id(self))
+
+    @staticmethod
+    def get_counter():
+        return Atm.__counter
+
+    @staticmethod
+    def set_counter(new):
+        if type(new) == int:
+            Atm.__counter = new
+            print("Counter Updated")
+        else:
+            print("Not Allowed")
+        
 
     def menu(self):
         user_input = input("""
@@ -74,7 +96,9 @@ class Atm:
 
 
 obj = Atm()
-print(id(obj))
+obj1 = Atm()
+obj2 = Atm()
+# print(id(obj))
 
 
 
@@ -237,5 +261,4 @@ l = [obj1, obj2] # Collection of Objects
 
 for i in l:
     i.intro()
-
 
