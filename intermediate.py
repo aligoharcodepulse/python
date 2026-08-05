@@ -464,3 +464,48 @@ deposit_thread.join()
 withdraw_thread.join()
 
 
+# Iteration, Iterator, Iterable
+# Example
+l = [1,2,3]
+print(type(l))
+
+# l is an iterable
+print(type(iter(l)))
+# iter(l) is an iterator
+
+# An object is iterable if loop works over it, 2nd method is 
+# call dir(object) and check if there is __iter__ function
+
+# An object is iterator if dir(object) has __iter__ as well as __next__
+# iter(object) will create iterator
+
+# Understanding how loop works
+l = [1,2,3,4]
+
+# Step 1. Fetch the iterator 
+iter_num = iter(l)
+
+# Step 2. --> next
+print(next(iter_num))
+print(next(iter_num))
+print(next(iter_num))
+print(next(iter_num))
+# print(next(iter_num)) # throw error
+
+
+# creating for loop
+def mera_khudka_for_loop(iterable):
+    iterator = iter(iterable)
+
+    while True:
+        try:
+            print(next(iterator))
+        except StopIteration:
+            break
+
+a = [1,2,3,4,5]
+b = range(1,11)
+c = (1,2,3)
+d = {1,2,3,4}
+e = {0:1, 1:1}
+print(mera_khudka_for_loop(e))
